@@ -1,1 +1,242 @@
+%-------------------------
+% College Resume Template in LaTeX
+% Author: [Your Name]
+% License: MIT
+% Feel free to use and modify for your own resume!
+%-------------------------
 
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[top=0.5in, bottom=0.5in, left=0.6in, right=0.6in]{geometry}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{fontawesome5}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{parskip}
+\usepackage{ragged2e}
+
+% ---- COLORS ----
+\definecolor{headingpurple}{RGB}{112, 48, 160}
+\definecolor{namered}{RGB}{192, 0, 0}
+\definecolor{linkblue}{RGB}{17, 85, 204}
+\definecolor{darktext}{RGB}{0, 0, 0}
+
+% ---- HYPERLINK SETUP ----
+\hypersetup{
+    colorlinks=true,
+    urlcolor=linkblue,
+    linkcolor=linkblue,
+    pdfborder={0 0 0}
+}
+
+% ---- SECTION FORMATTING ----
+\titleformat{\section}
+  {\large\bfseries\color{headingpurple}}
+  {}{0em}{}
+  [\color{headingpurple}\titlerule]
+
+\titlespacing{\section}{0pt}{6pt}{4pt}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+
+\setlist[itemize]{
+    leftmargin=1.5em,
+    itemsep=1pt,
+    parsep=0pt,
+    topsep=2pt,
+    label=\textbullet
+}
+
+%=============================================================
+\begin{document}
+\pagestyle{empty}
+
+%------------------------------------------------------------
+% HEADER
+%------------------------------------------------------------
+\begin{minipage}[t]{0.12\textwidth}
+    \vspace{0pt}
+    \includegraphics[width=\linewidth]{institute-logo.jpg}
+\end{minipage}%
+\hspace{0.015\textwidth}%
+\begin{minipage}[t]{0.50\textwidth}
+    \vspace{0pt}
+    {\LARGE\bfseries\color{namered} YOUR FULL NAME}\\[2pt]
+    Roll No. / Student ID\\
+    B.Tech -- \textbf{Your Department / Branch}\\
+    Your Institute Name\\
+    City
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.32\textwidth}
+    \vspace{0pt}
+    \raggedleft
+    \faPhone\ +91-XXXXXXXXXX\\[2pt]
+    \href{mailto:youremail@example.com}{\faEnvelope\ youremail@example.com}\\[2pt]
+    \href{https://linkedin.com/in/yourusername}{\faLinkedin\ yourusername}\\[2pt]
+    \href{https://github.com/yourusername}{\faGithub\ yourusername}\\[2pt]
+    DOB :: DD-MM-YYYY
+\end{minipage}
+
+\vspace{6pt}
+
+%------------------------------------------------------------
+% OBJECTIVE
+%------------------------------------------------------------
+\section{OBJECTIVE}
+
+A motivated B.Tech student in \textbf{[Your Branch]} at \textbf{[Your Institute]}, passionate about \textbf{[Your Domain/Field of Interest]}. Seeking opportunities to apply skills in \textbf{[Skill Area 1]} and \textbf{[Skill Area 2]} to contribute meaningfully to real-world projects and grow as a professional.
+
+%------------------------------------------------------------
+% EDUCATION
+% Row order (top to bottom): B.Tech → Class XII → Class X
+%------------------------------------------------------------
+\section{EDUCATION}
+
+\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\textwidth}{|>{\bfseries}X|X|c|c|}
+    \hline
+    \textbf{Qualification} & \textbf{Institute / Board} & \textbf{Score (CGPA/\%)} & \textbf{Year} \\
+    \hline
+    B.Tech -- Your Branch
+        & Your Institute Name, City
+        & X.XX CGPA & 20XX \\
+    \hline
+    Class XII (Board Name)
+        & Your School / Junior College, City, State
+        & XX.X\% & 20XX \\
+    \hline
+    Class X (Board Name)
+        & Your School, City, State
+        & XX.X\% & 20XX \\
+    \hline
+\end{tabularx}
+
+%------------------------------------------------------------
+% TECHNICAL SKILLS
+%------------------------------------------------------------
+\section{TECHNICAL SKILLS}
+\begin{itemize}
+    \item \textbf{Category 1 (e.g., Programming Languages):} Language A, Language B, Language C
+    \item \textbf{Category 2 (e.g., Frameworks \& Libraries):} Library A, Library B, Library C
+\end{itemize}
+
+%------------------------------------------------------------
+% INTERNSHIP / EXPERIENCE
+% TIP: List most recent experience first.
+%      If you have no internships yet, you can remove this
+%      section or add relevant freelance / project work.
+%------------------------------------------------------------
+\section{INTERNSHIP / EXPERIENCE}
+
+\textbf{Role / Position Title} \hfill \textit{Month YYYY -- Month YYYY}\\
+\textit{Company / Organisation Name, City} \hfill \textit{(Internship / Part-time / Full-time)}
+\begin{itemize}
+    \item Describe your primary responsibility or the task you were assigned. Focus on what you did, not just what the company does.
+    \item Mention any tool, technology, or methodology you used and the outcome or impact of your work.
+    \item Quantify results wherever possible (e.g., reduced processing time by X\%, analysed Y records).
+\end{itemize}
+
+\vspace{4pt}
+
+\textbf{Role / Position Title} \hfill \textit{Month YYYY -- Month YYYY}\\
+\textit{Company / Organisation Name, City} \hfill \textit{(Internship / Part-time / Full-time)}
+\begin{itemize}
+    \item Describe your contribution to the team or project in one focused sentence.
+    \item Highlight a specific technical or soft skill you applied or developed during this role.
+\end{itemize}
+
+%------------------------------------------------------------
+% PROJECTS
+%------------------------------------------------------------
+\section{PROJECTS}
+
+\begin{enumerate}
+
+\item \textbf{Project Title One (Tools / Technologies Used)} $|$ \href{https://github.com/}{View Project}
+\begin{itemize}
+    \item Describe what you built or the problem you solved. Focus on your role and the approach taken.
+    \item Highlight a key result, metric, or outcome that demonstrates impact (e.g., improved X by Y\%).
+\end{itemize}
+
+\vspace{2pt}
+
+\item \textbf{Project Title Two (Tools / Technologies Used)} $|$ \href{https://github.com/}{View Project}
+\begin{itemize}
+    \item Briefly explain the project goal and the technical approach you used.
+    \item Mention any datasets, tools, or methods involved and what you achieved.
+\end{itemize}
+
+\vspace{4pt}
+\begin{center}
+    \textit{\textbf{Core / Domain Projects}}
+\end{center}
+\vspace{-2pt}
+
+\item \textbf{Project Title Three (Domain/Tech, Month YYYY -- Month YYYY)} $|$ \href{https://github.com/}{View Project}
+\begin{itemize}
+    \item Describe the simulation, hardware, or software system you designed or implemented.
+    \item Mention the specific tools, techniques, or algorithms used.
+    \item State what you learned or the real-world relevance of the project.
+\end{itemize}
+
+\vspace{2pt}
+
+\item \textbf{Project Title Four (Tools / Technologies Used)} $|$ \href{https://github.com/}{View Project}
+\begin{itemize}
+    \item Describe the system you built and the problem it addresses.
+    \item Mention key components, integrations, or platforms used.
+    \item Highlight any hardware-software interface, APIs, or protocols involved.
+\end{itemize}
+
+\end{enumerate}
+
+%------------------------------------------------------------
+% POSITION OF RESPONSIBILITY
+% TIP: Include club roles, student body positions,
+%      event coordination, mentorship, or team leads.
+%------------------------------------------------------------
+\section{POSITION OF RESPONSIBILITY}
+
+\begin{itemize}
+    \item \textbf{Role Title} $|$ \textit{Club / Committee / Organisation Name, Institute} \hfill \textit{Month YYYY -- Month YYYY}\\
+    Briefly describe your responsibilities, what you managed or led, and any measurable impact (e.g., organised event for X participants, led a team of Y members).
+
+    \vspace{3pt}
+
+    \item \textbf{Role Title} $|$ \textit{Club / Committee / Organisation Name, Institute} \hfill \textit{Month YYYY -- Month YYYY}\\
+    Describe the scope of your role and any initiative you took or outcome you delivered.
+\end{itemize}
+
+%------------------------------------------------------------
+% EXTRA CO-CURRICULAR ACTIVITIES
+%------------------------------------------------------------
+\section{EXTRA CO-CURRICULAR ACTIVITIES}
+
+\begin{itemize}
+    \item Describe your involvement in a sport, hobby, or activity and the transferable skills it reflects (e.g., teamwork, strategy, discipline).
+    \item Mention any competitions participated in, certifications earned, or communities you are part of.
+\end{itemize}
+
+%------------------------------------------------------------
+% ACHIEVEMENTS
+% TIP: Include competitive exam ranks, scholarships,
+%      Olympiad medals, or academic awards.
+%------------------------------------------------------------
+\section{ACHIEVEMENTS}
+
+\begin{itemize}
+    \item Brief description of Achievement One, including rank, score, or recognition --- (Year)
+    \item Brief description of Achievement Two, including context or significance --- (Year)
+    \item Brief description of Achievement Three (optional) --- (Year)
+\end{itemize}
+
+\end{document}
